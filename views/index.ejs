@@ -1,0 +1,55 @@
+<%- include("partials/header") %>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h2 class="hero-title animated-text">
+    Welcome to My Blog
+  </h2>
+  <p class="hero-subtitle fade-in">
+    A place to write, reflect, and share your thoughts with the world.
+  </p>
+
+  <% if (!user) { %>
+    <div class="hero-actions fade-in">
+      <a href="/login" class="btn">Login</a>
+      <a href="/signup" class="btn outline">Create Account</a>
+    </div>
+  <% } else { %>
+    <div class="hero-actions fade-in">
+      <a href="/new" class="btn">Write a Post</a>
+    </div>
+  <% } %>
+</section>
+
+<hr class="divider">
+
+<!-- POSTS SECTION -->
+<section class="posts">
+  <% if (posts.length === 0) { %>
+    <p class="empty fade-in">
+      No posts yet. Be the first one to write ✍️
+    </p>
+  <% } %>
+
+  <% posts.forEach(post => { %>
+    <article class="post-card fade-in">
+      <h3 class="post-title"><%= post.title %></h3>
+      <p class="post-content">
+        <%= post.content %>
+      </p>
+
+      <% if (user) { %>
+        <div class="actions">
+          <a href="/edit/<%= post.id %>" class="btn small">Edit</a>
+
+          <form action="/delete/<%= post.id %>" method="POST">
+            <button class="btn danger small">Delete</button>
+          </form>
+        </div>
+      <% } %>
+    </article>
+  <% }) %>
+</section>
+
+<%- include("partials/footer") %>
+

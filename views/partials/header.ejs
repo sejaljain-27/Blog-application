@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div>
+    <h1 class="logo animated-text">My Blog</h1>
+    <p class="tagline fade-in">
+      Thoughts, ideas & stories worth sharing
+    </p>
+  </div>
+
+  <nav>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/new" class="nav-link">New Post</a>
+
+    <% if (!user) { %>
+      <a href="/login" class="nav-link">Login</a>
+      <a href="/signup" class="nav-link btn">Sign Up</a>
+    <% } else { %>
+      <span class="nav-user">Hi, <%= user.username %></span>
+      <a href="/logout" class="nav-link danger">Logout</a>
+    <% } %>
+  </nav>
+</header>
+
+<main>
+

@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+
+<section class="form-page fade-in">
+  <div class="form-card">
+    <h2 class="form-title">Create New Post</h2>
+
+    <form action="/new" method="POST">
+      <label>Title</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="Enter post title"
+        required
+      >
+
+      <label>Content</label>
+      <textarea
+        name="content"
+        rows="8"
+        placeholder="Write your post..."
+        required
+      ></textarea>
+
+      <button class="btn full">Publish</button>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer") %>
+

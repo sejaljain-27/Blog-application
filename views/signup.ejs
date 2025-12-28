@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+
+<div class="auth-card fade-in">
+  <h2 class="animated-text">Create Account</h2>
+
+  <% if (typeof error !== "undefined") { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <form action="/signup" method="POST">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+
+    <button class="btn full">Sign Up</button>
+  </form>
+
+  <p class="auth-switch">
+    Already have an account? <a href="/login">Login</a>
+  </p>
+</div>
+
+<%- include("partials/footer") %>

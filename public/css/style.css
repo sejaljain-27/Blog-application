@@ -1,0 +1,313 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================= BASE LAYOUT ================= */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: #FAF7F2; /* cream */
+  color: #2B2B2B;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background: #8B1E1E; /* deep red */
+  color: #FAF7F2;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.nav-link {
+  color: #FAF7F2;
+  margin-left: 18px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-user {
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  color: #8B1E1E;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-actions {
+  margin-top: 1.8rem;
+}
+
+/* ================= POSTS ================= */
+
+.posts {
+  max-width: 850px;
+  margin: auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.post-card {
+  background: #ffffff;
+  padding: 2rem;
+  margin-bottom: 1.8rem;
+  border-radius: 8px;
+  border-left: 5px solid #8B1E1E;
+}
+
+.post-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 3rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  background: #8B1E1E;
+  color: #FAF7F2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.btn:hover {
+  background: #A93226;
+}
+
+.btn.outline {
+  background: transparent;
+  color: #8B1E1E;
+  border: 1px solid #8B1E1E;
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.btn.danger {
+  background: #C0392B;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.full {
+  width: 100%;
+}
+
+/* ================= AUTH ================= */
+
+.auth-card {
+  max-width: 420px;
+  margin: 4rem auto;
+  background: #ffffff;
+  padding: 2.2rem;
+  border-radius: 8px;
+  border-top: 4px solid #8B1E1E;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #8B1E1E;
+}
+
+.auth-card input,
+.auth-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-switch a {
+  color: #8B1E1E;
+}
+
+.error {
+  color: #C0392B;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid #8B1E1E;
+  animation: typing 2s steps(22) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #8B1E1E;
+  color: #FAF7F2;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+/* ================= CREATE POST PAGE ================= */
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border-top: 4px solid #7A1C1C; /* muted red */
+}
+
+.form-title {
+  margin-bottom: 1.8rem;
+  color: #7A1C1C;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #FAF7F2;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+/* ===== BUTTON COLOR FIX ===== */
+
+.btn {
+  background: #7A1C1C;
+  color: #FAF7F2;
+}
+
+.btn:hover {
+  background: #8F2A2A;
+}
+.btn.outline {
+  color: #7A1C1C;
+  border: 1px solid #7A1C1C;
+}
+.btn.danger {
+  background: #A93226;
+}
+.btn.danger:hover {
+  background: #C0392B;
+}
